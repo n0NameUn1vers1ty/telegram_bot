@@ -1,3 +1,2 @@
-# telegram_bot
-telegram bot for university project
-
+#Telegram Bot 
+**A bot that parses news channels and sends current news**
