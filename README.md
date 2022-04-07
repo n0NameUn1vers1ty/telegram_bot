@@ -1,5 +1,13 @@
-##Telegram Bot 
+# Telegram Bot 
+
 **A bot that parses news channels and sends current news**
 
-*1. install 'dist'* **(setup Project)**
-*2. pip install -r requirements.txt* **(dependency)**
+## get start
+
+  install 'dist'* **(setup Project)**
+```
+$ pip install -r requirements.txt
+```
+```
+$ py bot.py
+```
