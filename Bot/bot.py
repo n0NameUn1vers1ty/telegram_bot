@@ -1,3 +1,4 @@
+ls
 import telebot
 
 import requests
@@ -9,15 +10,15 @@ bot = telebot.TeleBot(config.TOKEN)
 
 
 
-@bot.message_handler(commands=['start'])
+@bot.message_handler(commands=['start'])# Приветствие
 def send_welcome(message):
     bot.reply_to(message, "Im working")
 
 @bot.message_handler(commands=['iTnews'])
 
 
-def ItNew(message):
-    url = 'https://droider.ru/' # ссылка на сайт
+def ItNew(message):# Парсер сайта
+    url = 'https://droider.ru/' # Ссылка на сайт
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'lxml')
     links = soup.find_all('a',class_='micronews-slider__item micronews-slider__item_link')
