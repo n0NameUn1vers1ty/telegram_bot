@@ -11,3 +11,10 @@ $ pip install -r requirements.txt
 ```
 $ py bot.py
 ```
+### Authors
+
+**Suchkov Valdimir** 
+
+**Yan Romanets**
+
+**Michael Belyaev**
