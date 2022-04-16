@@ -40,4 +40,4 @@ def News(message):# Парсер Lenta.ru
         bot.send_message(message.chat.id, span.text)
 
 # RUN
-bot.polling(none_stop=True)
+bot.infinity_polling(timeout=10, long_polling_timeout = 5)
