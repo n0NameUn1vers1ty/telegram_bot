@@ -13,7 +13,7 @@ $ py bot.py
 ```
 ### Authors
 
-**Suchkov Valdimir** 
+**Suchkov Vladimir** 
 
 **Yan Romanets**
 
