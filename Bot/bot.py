@@ -15,7 +15,7 @@ def ItNew(message):# Парсер habr.ru
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     url = 'https://habr.com/ru/news/' # Ссылка на сайт
     response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'lxml')
+    soup = BeautifulSoup(response.text, 'html')
     links = soup.find_all('a', class_='tm-article-snippet__title-link',limit = 10)
 
     temp = "Новости с Habr" + '\n'
@@ -39,7 +39,7 @@ def News(message):# Парсер Lenta.ru
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     url = 'https://lenta.ru/' # Ссылка на сайт
     response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'lxml')
+    soup = BeautifulSoup(response.text, 'html')
     firstTopic = soup.find('div',class_='card-big__titles')
     firstTopicLink = soup.find('a', class_ = 'card-big _topnews _news')
     topics = soup.find_all('span',class_='card-mini__title', limit = 10)
@@ -68,7 +68,7 @@ def Weather(message):# Парсер погоды
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     url = 'https://world-weather.ru/pogoda/russia/moscow/' # Ссылка на сайт
     response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'lxml')
+    soup = BeautifulSoup(response.text, 'html')
     delete = soup.find('span',id='open-desc-weather')
     delete.clear()
     delete = soup.find('span',id='close-desc-weather')
@@ -97,11 +97,11 @@ def intro(message):#Общее сообщение
     url2 = 'https://lenta.ru/' # Ссылка на сайт
     url3 = 'https://habr.com/ru/news/' # Ссылка на сайт
     response = requests.get(url1)
-    soup1 = BeautifulSoup(response.text, 'lxml')
+    soup1 = BeautifulSoup(response.text, 'html')
     response = requests.get(url2)
-    soup2 = BeautifulSoup(response.text, 'lxml')
+    soup2 = BeautifulSoup(response.text, 'html')
     response = requests.get(url3)
-    soup3 = BeautifulSoup(response.text, 'lxml')
+    soup3 = BeautifulSoup(response.text, 'html')
     #погода
     delete = soup1.find('span',id='open-desc-weather')
     delete.clear()
